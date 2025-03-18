@@ -25,7 +25,7 @@ const ramens = [
       
     document.getElementById('ramen-image').src = ramen.image;
     document.getElementById('ramen-name').textContent = ramen.name;
-    document.getElementById('ramen-restuarant').textContent = ramen.restuarant;
+    document.getElementById('ramen-restaurant').textContent = ramen.restaurant;
     document.getElementById('ramen-rating').textContent = `Rating: ${ramen-rating}`;
     document.getElementById('ramen-comment').textContent = `Comment: ${ramen-comment}`;
     }
