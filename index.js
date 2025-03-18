@@ -1,38 +1,33 @@
 const ramens = [
-    { id: 1, name: "Shoyu Ramen", restaurant: "Ichiran", image: "images/shoyu.jpg", rating: 5, comment: "Delicious!" },
-    { id: 2, name: "Naruto Ramen", restaurant: "Mitsuyado Se", image: "images/naruto.jpg", rating: 4, comment: "Bursts with flavor!" },
-    { id: 3, name: "Nirvana Ramen", restaurant: "Ramen Nagi", image: "images/nirvana.jpg", rating: 5, comment: "A flavor explosion!" },
-    { id: 4, name: "Kojiro Ramen", restaurant: "Ramen Kojiro", image: "images/kojiro.jpg", rating: 3, comment: "Too much broth." },
-    { id: 5, name: "Gyukotsu Ramen", restaurant: "Ramen Nagi", image: "images/gyukotsu.jpg", rating: 2, comment: "Not my favorite." }
+    { id: 1, name: "Shoyu Ramen", restaurant: "Ichiran", image: "https://moringa.instructure.com/courses/967/files/517801/preview", rating: 5, comment: "Sweet!" },
+    { id: 2, name: "Naruto Ramen", restaurant: "Mitsuyado Se", image: "https://moringa.instructure.com/courses/967/files/517800/preview", rating: 4, comment: "Bursts with flavor!" },
+    { id: 3, name: "Nirvana Ramen", restaurant: "Ramen Nagi", image: "https://moringa.instructure.com/courses/967/files/517799/preview", rating: 5, comment: "Taste so good!" },
+    { id: 4, name: "Kojiro Ramen", restaurant: "Ramen Kojiro", image: "https://moringa.instructure.com/courses/967/files/517798/preview", rating: 3, comment: "Too much soup in the meal." },
+    { id: 5, name: "Gyukotsu Ramen", restaurant: "Ramen Nagi", image: "https://moringa.instructure.com/courses/967/files/517797/preview", rating: 2, comment: "Not my favorite." }
   ];
   
-  document.addEventListener("DOMContentLoaded", () => {
-    const ramenMenu = document.getElementById("ramen-menu");
-    const ramenDetail = document.getElementById("ramen-detail");
-    const detailImage = document.getElementById("ramen-img");
-    const detailName = document.getElementById("ramen-name");
-    const detailRestaurant = document.getElementById("ramen-restaurant");
-    const detailRating = document.getElementById("ramen-rating");
-    const detailComment = document.getElementById("ramen-comment");
-    const newRamenForm = document.getElementById("new-ramen");
   
-    function displayRamens() {
+  
+    function displayRamens () {
+      const ramenMenu = document.getElementById('ramen-menu')
+      ramenMenu.innerHTML = ``
       ramens.forEach(ramen => {
         const img = document.createElement("img");
         img.src = ramen.image;
         img.alt = ramen.name;
-        img.classList.add("ramen-thumbnail");
         img.addEventListener("click", () => handleClick(ramen));
         ramenMenu.appendChild(img);
       });
     }
   
     function handleClick(ramen) {
-      detailImage.src = ramen.image;
-      detailName.textContent = ramen.name;
-      detailRestaurant.textContent = `Restaurant: ${ramen.restaurant}`;
-      detailRating.textContent = `Rating: ${ramen.rating}`;
-      detailComment.textContent = `Comment: ${ramen.comment}`;
+      console.log("clicked ramen:", ramen);
+      
+    document.getElementById('ramen-image').src = ramen.image;
+    document.getElementById('ramen-name').textContent = ramen.name;
+    document.getElementById('ramen-restuarant').textContent = ramen.restuarant;
+    document.getElementById('ramen-rating').textContent = `Rating: ${ramen-rating}`;
+    document.getElementById('ramen-comment').textContent = `Comment: ${ramen-comment}`;
     }
   
     function addSubmitListener() {
@@ -63,8 +58,8 @@ const ramens = [
   
     function main() {
       displayRamens();
-      addSubmitListener();
+      addSubmitListener()
     }
   
     main();
-  });
+  
