@@ -1,6 +1,6 @@
 const ramens = [
     { id: 1, name: "Shoyu Ramen", restaurant: "Ramen Restuarant", image: "https://moringa.instructure.com/courses/967/files/517801/preview", rating: 5, comment: "Sweet!" },
-    { id: 2, name: "Naruto Ramen", restaurant: "Ramen Restuarant", image: "https://moringa.instructure.com/courses/967/files/517800/preview", rating: 4, comment: "Bursts with flavor!" },
+    { id: 2, name: "Naruto Ramen", restaurant: "Ramen Restuarant", image: "https://moringa.instructure.com/courses/967/files/517800/preview", rating: 4, comment: "love the flavor!" },
     { id: 3, name: "Nirvana Ramen", restaurant: "Ramen Restuarant", image: "https://moringa.instructure.com/courses/967/files/517799/preview", rating: 5, comment: "Taste so good!" },
     { id: 4, name: "Kojiro Ramen", restaurant: "Ramen Restuarant", image: "https://moringa.instructure.com/courses/967/files/517798/preview", rating: 3, comment: "Too much soup in the meal." },
     { id: 5, name: "Gyukotsu Ramen", restaurant: "Ramen Restuarant", image: "https://moringa.instructure.com/courses/967/files/517797/preview", rating: 2, comment: "Not my favorite." }
@@ -26,8 +26,8 @@ const ramens = [
     document.querySelector('#ramen-image').src = ramen.image;
     document.querySelector('#ramen-name').textContent = ramen.name;
     document.querySelector('#ramen-restaurant').textContent = ramen.restaurant;
-    document.querySelector('#ramen-rating').textContent = `Rating: ${ramen-rating}`;
-    document.querySelector('#ramen-comment').textContent = `Comment: ${ramen-comment}`;
+    document.querySelector('#ramen-rating').textContent = ramen.rating;
+    document.querySelector('#ramen-comment').textContent = ramen.comment;
     }
   
     function addSubmitListener() {
