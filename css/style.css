@@ -3,7 +3,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: peachpuff;
 }
 
 h1 {
@@ -20,7 +20,6 @@ h1 {
     padding: 15px;
     overflow-x: auto;
     background-color: #f8f8f8;
-    border-bottom: 2px solid black;
     white-space: nowrap;
 }
 
