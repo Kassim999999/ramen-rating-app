@@ -33,22 +33,12 @@ const ramens = [
     function addSubmitListener() {
       newRamen.addEventListener("submit", (e) => {
         e.preventDefault();
-        
-        const newRamen = {
-          id: ramens.length + 1,
-          name: document.getElementById("name").value,
-          restaurant: document.getElementById("restaurant").value,
-          image: document.getElementById("image").value,
-          rating: document.getElementById("rating").value,
-          comment: document.getElementById("comment").value
-        };
   
         ramens.push(newRamen);
   
         const img = document.createElement("img");
         img.src = newRamen.image;
         img.alt = newRamen.name;
-        img.classList.add("ramen-thumbnail");
         img.addEventListener("click", () => handleClick(newRamen));
         ramenMenu.appendChild(img);
   
